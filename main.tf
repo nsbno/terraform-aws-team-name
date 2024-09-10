@@ -10,7 +10,7 @@ terraform {
 }
 
 resource "aws_ssm_parameter" "team_name" {
-  name = "__platform__/team_name_handle"
+  name = "/__platform__/team_name_handle"
 
   description = "The name of the team that owns this environment. Format is lowercase."
   type        = "String"
