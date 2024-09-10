@@ -1,0 +1,32 @@
+= Team Name
+:!toc-title:
+:!toc-placement:
+:toc:
+
+// TODO: Write a sentence about what this module is for
+
+
+toc::[]
+
+== Usage
+Remember to check out the link:variables.tf[*variables*] and link:outputs.tf[*outputs*] to see all options.
+
+NOTE: Create this module in your `-aws` repo for all your environments.
+
+[source, hcl]
+----
+module "team_name" {
+  source = "github.com/nsbno/terraform-aws-team-name?ref=x.y.z"
+
+  # Format is lowercase. Team names consisting of two words should be separated by a hyphen ("-").
+  team_name = "infrademo"
+}
+----
+
+== Relevant Repositories
+
+You can use this repo together with this repo!
+
+link:https://github.com/nsbno/terraform-aws-account-metadata[`nsbno/terraform-aws-account-metadata`]::
+A data module that gives you typical values that are needed in your environment. Fetch team name created from this
+module.
